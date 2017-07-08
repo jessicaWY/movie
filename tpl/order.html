@@ -1,0 +1,38 @@
+<div id="order">
+  <div ng-include="'tpl/include/header.html'"></div>
+  <div class="container">
+    <form ng-hide="msgSuccess||msgError">
+      <div class="form-group">
+        <label>联系人:</label>
+        <input type="text" class="form-control" ng-model="user.uname">
+      </div>
+      <div class="form-group">
+        <label>性别:</label><br>
+        <div class="radio-inline">
+          <label>
+            <input value="1" name="sex" type="radio"  ng-model="user.sex">先生
+          </label>
+        </div>
+        <div class="radio-inline">
+          <label>
+           <input value="2" name="sex" type="radio" ng-model="user.sex">女士
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>联系电话:</label>
+        <input type="text" class="form-control" ng-model="user.phone">
+      </div>
+      <div class="form-group">
+        <label>所购电影:</label>
+        <input class="form-control" ng-model="user.movie">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-success btn-block" ng-click="submitOrder()">确定下单</button>
+      </div>
+    </form>
+    <div ng-show='msgSuccess' class="alert alert-success">{{msgSuccess}}</div>
+    <div ng-show='msgError' class="alert alert-danger">{{msgError}}</div>
+  </div>
+  <div ng-include="'tpl/include/footer.html'"></div>
+</div>

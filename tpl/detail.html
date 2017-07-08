@@ -1,0 +1,30 @@
+<div ng-include="'tpl/include/header.html'"></div>
+<div class="container">
+
+  <ul class="breadcrumb">
+    <li><a href="#/start">主页</a></li>
+    <li><a href="#">详情</a></li>
+  </ul>
+
+  <div class="panel panel-default">
+
+    <div class="panel-body">
+      <h1>{{movie.name}}</h1>
+      <img src='imgs/{{movie.img_lg}}'/>
+      <p>{{movie.actor}}</p>
+      <p>{{movie.detail}}</p>
+
+      <p>{{movie.price| currency:'￥'}}</p>
+    </div>
+
+    <div class="panel-footer">
+      <div class="text-right">
+        <button class="btn btn-success" ng-click="jump('/order/'+movie.mid)">我要购票</button>
+        <button class="btn btn-primary" ng-click="jump('/main')">我再看看</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<div ng-include="'tpl/include/footer.html'"></div>

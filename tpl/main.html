@@ -1,0 +1,35 @@
+<div ng-include="'tpl/include/header.html'"></div>
+
+
+<div class="container">
+
+  <div class="form-group has-feedback">
+    <input class="form-control" type="text" ng-model="kw"/>
+    <span class="form-control-feedback glyphicon glyphicon-search"></span>
+  </div>
+
+  <div class="list-group">
+    <a class="list-group-item" href="#/detail/id={{movie.mid}}" ng-repeat="movie in movieList">
+      <div class="media">
+        <div class="media-left media-middle">
+          <img class="media-object" ng-src="imgs/{{movie.img_sm}}" alt=""/>
+        </div>
+
+        <div class="media-body">
+          <h4>{{movie.name}}</h4>
+          <p>{{movie.actor}}</p>
+          <p>{{movie.detail}}</p>
+          <p>{{movie.price | currency:'￥'}}</p>
+        </div>
+
+      </div>
+    </a>
+  </div>
+
+  <button ng-show='hasMore' ng-click='loadMore()' class="btn btn-success btn-block">加载更多</button>
+  <div ng-hide='hasMore' class="alert alert-danger">
+    没有更多数据了
+  </div>
+</div>
+
+<div ng-include="'tpl/include/footer.html'"></div>

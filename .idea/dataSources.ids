@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - ayou_movie@localhost" uuid="7a9c6846-9e35-4e83-9cac-0dbf746bbb77">
+    <database-info product="MySQL" version="5.6.36" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.40 ( Revision: 402933ef52cad9aa82624e80acbea46e3a701ce6 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+      <schema id="1" name="ayou_movie">
+        <visible>1</visible>
+      </schema>
+      <schema id="2" name="ayou"/>
+      <schema id="3" name="information_schema"/>
+      <schema id="4" name="mysql"/>
+      <schema id="5" name="performance_schema"/>
+      <schema id="6" name="test"/>
+      <table id="7" parent="1" name="movie_list"/>
+      <table id="8" parent="1" name="movie_order"/>
+      <column id="9" parent="7" name="mid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="10" parent="7" name="name">
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="11" parent="7" name="price">
+        <data-type>float(6,2)|0</data-type>
+      </column>
+      <column id="12" parent="7" name="img_sm">
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="13" parent="7" name="img_lg">
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="14" parent="7" name="actor">
+        <data-type>varchar(100)|0</data-type>
+      </column>
+      <column id="15" parent="7" name="detail">
+        <data-type>varchar(2048)|0</data-type>
+      </column>
+      <key id="16" parent="7" name="PRIMARY">
+        <columns>mid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="17" parent="8" name="oid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="18" parent="8" name="phone">
+        <data-type>varchar(16)|0</data-type>
+      </column>
+      <column id="19" parent="8" name="user_name">
+        <data-type>varchar(16)|0</data-type>
+      </column>
+      <column id="20" parent="8" name="sex">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="21" parent="8" name="order_time">
+        <data-type>mediumtext|0</data-type>
+      </column>
+      <column id="22" parent="8" name="movie">
+        <data-type>varchar(256)|0</data-type>
+      </column>
+      <column id="23" parent="8" name="mid">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <key id="24" parent="8" name="PRIMARY">
+        <columns>oid</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
